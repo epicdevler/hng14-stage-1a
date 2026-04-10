@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage #</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400&display=swap"
+        rel="stylesheet" </head>
+
+<body>
+    <main>
+        <articel class="task-item" data-testid="test-todo-card">
+            <div class="task-header">
+                <input type="checkbox" aria-label="Toggle complete" data-testid="test-todo-complete-toggle" />
+                <h2 data-testid="test-todo-title">Title</h2>
+
+                <p class="chip chip-status-warning" data-testid="test-todo-priority">High</p>
+
+            </div>
+            <div class="task-body">
+                <p class="task-description" data-testid="test-todo-description">Create wireframes and high-fidelity
+                    mockups for the new marketing
+                    landing page, covering both mobile and desktop breakpoints.
+
+                </p>
+                <div class="meta-grid">
+                    <div>
+                        <p class="meta-label">Due Date</p>
+                        <div class="meta-content"><time datetime="2026-04-16" data-testid="test-todo-due-date">Due Apr
+                                16, 2026</time></div>
+                    </div>
+                    <div>
+                        <p class="meta-label">Remaining</p>
+                        <div class="meta-content">
+                            <p data-testid="test-todo-time-remaining">Due in 3 Days</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="meta-label">Status</p>
+                        <div class="meta-content">
+                            <p class="status">Pending</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator"></div>
+
+                <ul class="tags" data-testid="test-todo-tags">
+                    <li data-testid="test-todo-tag-work" class="chip">Work</li>
+                    <li data-testid="test-todo-tag-urgent" class="chip">Urgent</li>
+                </ul>
+            </div>
+
+            <!-- <div class="separator"></div> -->
+
+            <div class="task-footer">
+                <button data-testid="test-todo-edit-button">Edit</button>
+                <button data-testid="test-todo-delete-button">Delete</button>
+            </div>
+
+        </articel>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
