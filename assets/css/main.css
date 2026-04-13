@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    outline-color: black;
+    outline-offset: .3em;
+    outline-width: 0.1px;
 }
 
 body {
@@ -23,7 +26,7 @@ main {
 
 
 button {
-    padding: .8em;
+    padding: .5em .9em;
     border-radius: .4em;
     background: white;
     border-width: thin;
@@ -40,7 +43,7 @@ button:hover {
 .task-item {
 
     height: fit-content;
-    border: 1px solid gray;
+    border: .1em solid gray;
     background-color: white;
     border-radius: .8em;
     display: flex;
@@ -66,9 +69,9 @@ button:hover {
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 18px;
+    width: 1.5em;
     aspect-ratio: 1;
-    border: 1.5px solid grey;
+    border: .1em solid grey;
     border-radius: 5px;
     cursor: pointer;
     background: transparent;
@@ -103,28 +106,31 @@ input[type="checkbox"]:checked::after {
 
 .task-item .task-header h2 {
     flex: 1;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
+.task-item.completed .task-title{
+    text-decoration: line-through;
+}
+
+
 .task-item .task-body .task-description {
-    color: rgb(67, 67, 67);
-    font-size: .9em;
+    color: rgb(45, 45, 45);
+    font-size: .9rem;
 }
 
 .task-item .task-body .meta-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: .4em;
     margin: 1em 0;
     width: 100%;
-
 }
 
 .task-item .meta-label {
-    font-size: .6em;
+    font-size: .6rem;
     text-transform: uppercase;
     color: rgb(79, 79, 79);
-
 }
 
 .task-item .task-body .meta-grid div {
@@ -132,19 +138,26 @@ input[type="checkbox"]:checked::after {
 }
 
 .task-item .task-body .meta-grid .meta-content {
-    font-size: .8em !important;
+    font-size: .8rem !important;
     margin-top: .4em;
     word-break: keep-all;
     word-wrap: break-word;
 }
+.task-item .task-body .meta-grid .meta-content .overdue {
+    color: red !important;
+}
 
 .task-item .task-body .meta-grid .meta-content .status {
-    font-size: .8em !important;
+    font-size: .8rem !important;
     background-color: rgb(229, 229, 229);
     padding: .5em .7em;
     width: fit-content;
     border-radius: 1em;
-
+}
+.task-item.completed .task-body .meta-grid .meta-content .status {
+    color: rgb(2, 97, 2);
+    background-color: rgba(0, 128, 0, 0.264) !important;
+    
 }
 
 .task-item .separator {
@@ -158,7 +171,7 @@ input[type="checkbox"]:checked::after {
     padding: .5em .7em;
     width: fit-content;
     border-radius: 1em;
-    font-size: .7em;
+    font-size: .7rem;
 
     /* font-weight: 400; */
 }
@@ -177,7 +190,7 @@ input[type="checkbox"]:checked::after {
 .task-item .task-footer {
     display: flex;
     justify-content: end;
-    gap: .3em;
+    gap: .6em;
 }
 
 
