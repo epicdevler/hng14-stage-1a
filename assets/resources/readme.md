@@ -23,7 +23,7 @@ Example values:
 Updates roughly every 30–60 seconds (or at least shows correct initial value)
 Status indicator (e.g., "Pending" / "In Progress" / "Done") → data-testid="test-todo-status"
 Checkbox or toggle for completion → data-testid="test-todo-complete-toggle"
-Must be a real <input type="checkbox"> or properly labeled button with role="checkbox"
+Must be a real `<input type="checkbox">` or properly labeled button with role="checkbox"
 Tags / categories list (chips/pills) → data-testid="test-todo-tags"
 Each tag can optionally have:
 data-testid="test-todo-tag-work"
@@ -33,16 +33,16 @@ data-testid="test-todo-tag-urgent"
 
 HTML & Semantics Recommendations
 Use proper semantic HTML:
-• Card root → <article> or <section role="region">
-• Title → <h2> or <h3>
-• Description → <p>
-• Priority & Status → <span> or <strong>
+• Card root → `<article>` or `<section role="region">`
+• Title → `<h2>` or `<h3>`
+• Description → `<p>`
+• Priority & Status → `<span>` or `<strong>`
 Add aria-label if visual-only
-• Due date & time-remaining → <time> element (with datetime attribute if possible)
-• Checkbox → real <input type="checkbox"> + <label>
-• Tags → <ul role="list"> of <li>
-OR <div role="list"> with chips
-• Buttons → <button> (not <div>)
+• Due date & time-remaining → `<time>` element (with datetime attribute if possible)
+• Checkbox → real `<input type="checkbox"> + <label>`
+• Tags → `<ul role="list">` of `<li>`
+OR `<div role="list">` with chips
+• Buttons → `<button>` (not `<div>`)
 Add aria-label if icon-only
 
 Accessibility Requirements
