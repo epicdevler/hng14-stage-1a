@@ -1,0 +1,64 @@
+
+form {
+    padding: 1.6rem;
+    gap: .6rem;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+form .field label {
+    color: #5c5c5c;
+    font-size: 1rem;
+    margin-bottom: .3rem;
+}
+
+form input,
+textarea,
+select {
+    padding: .5rem;
+    border-radius: var(--rounded-default);
+    border-color: #9c9c9c !important;
+}
+textarea{
+    resize: none;
+    scrollbar-width: none;
+}
+
+form input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline-offset: .3rem;
+}
+.field.invalid input,
+.field.invalid textarea,
+.field.invalid select {
+    border-color: var(--border-error) !important;
+}
+
+select {
+    background: none;
+}
+.error-text{
+    color: var(--fg-error);
+    font-size: .8em;
+    transition: display .2s ease-in-out;
+    display: none;
+    margin-top: .2rem;
+}
+.field.invalid .error-text{display: block !important;
+}
+
+form .form-actions {
+    display: flex;
+    justify-content: end;
+    gap: .4rem;
+    padding-top: 1rem;
+}
+
+form .task-cancel-btn {
+    border: none;
+}
