@@ -176,54 +176,15 @@ Clean state management
 
 Updated Live URL
 Updated GitHub repo
+Updated README including:
 
-## Implementation Summary (Stage 1a)
+What changed from Stage 0
+New design decisions
+Any known limitations
+Accessibility notes
 
-### What changed from Stage 0
 
-- The Todo Card now supports editing all fields (title, description, priority, due date) with a dedicated edit mode and form.
-- Status is fully interactive: users can toggle between "Pending", "In Progress", and "Done" using a dropdown or segmented control, and the checkbox stays in sync.
-- Priority indicator is now visual (color, icon, or accent) and updates based on priority.
-- Description is collapsible with an accessible expand/collapse toggle for long content.
-- Overdue indicator and granular time display (e.g., "Due in 2 days", "Overdue by 1 hour").
-- Time remaining updates every 30–60 seconds and stops when status is "Done".
-- Visual state changes for status, priority, and overdue states.
-- All controls and flows are keyboard accessible and screen reader friendly.
-- Responsive layout for mobile, tablet, and desktop.
-- All required and new testids are present and functional.
+Airtable Link
 
-### Design Decisions
-
-- Kept the UI simple and minimalist for clarity and ease of use.
-- Used clear visual cues for priority, status, and overdue states.
-- Prioritized keyboard and screen reader accessibility.
-- Collapsible description for better handling of long content.
-- Responsive design: vertical stacking on mobile, horizontal alignment on desktop.
-
-### Known Limitations
-
-- Only a single Todo Card is supported (not a full app).
-- Focus trap in edit mode is not implemented (optional bonus).
-- No persistent storage; state resets on reload.
-- No animations for expand/collapse.
-
-### Accessibility Notes
-
-- All form fields have labels.
-- Status control has an accessible name.
-- Expand/collapse uses aria-expanded, aria-controls, and matching id.
-- Live time updates use aria-live="polite".
-- Keyboard flow: Checkbox → Status → Expand → Edit → Delete → Save/Cancel.
-- All interactive elements are reachable and usable via keyboard.
-
----
-
-#### Stage 0 Requirements Reference
-
-The Stage 0 task required a testable Todo Card with:
-- Title, description, priority, due date, time remaining, status, completion toggle, tags, edit/delete buttons
-- Proper semantic HTML and accessibility
-- Responsive layout (mobile to desktop)
-- Keyboard navigation and focus styles
-
-All Stage 0 requirements remain supported and have been extended in Stage 1a as described above.
+Submission Link: https://docs.google.com/forms/d/e/1FAIpQLSfyENWbGf9qRkmDj77BIEAPkO0WwIqDpeR6_dte026HA-KuWQ/viewform
+Deadline: 17/04/2026 11:59pm
