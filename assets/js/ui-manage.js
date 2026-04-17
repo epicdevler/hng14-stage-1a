@@ -164,3 +164,8 @@ function handleDescriptionCollapsing() {
 
 
 }
+
+
+export function returnFocusToEditBtn(){
+    document.querySelector(".task-edit-btn").focus({focusVisible: true})
+}

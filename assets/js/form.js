@@ -1,4 +1,4 @@
-import { toggleEditMode, propagateTaskDataToUI } from "./ui-manage.js"
+import { returnFocusToEditBtn, toggleEditMode, propagateTaskDataToUI } from "./ui-manage.js"
 import TaskData from "./task-data.js"
 
 const formEl = document.forms.taskEditForm
@@ -20,6 +20,7 @@ dueDateEl.value = TaskData.dueDate
 
 cancelEdit.addEventListener("click", () => {
     toggleEditMode()
+    returnFocusToEditBtn()
 })
 
 formEl.addEventListener("submit", event => {
@@ -47,6 +48,7 @@ formEl.addEventListener("submit", event => {
 
         propagateTaskDataToUI()
         toggleEditMode()
+        returnFocusToEditBtn()
     }
 
 
